@@ -3,6 +3,11 @@
  * The javascript spread operator (...) allows us to quickly copy all or part of 
 an existing array or object into another array or object.
 */
+/** 
+Spread operator ব্যবহার করে আমরা array/object এর element গুলোকে করে কিছু কাজ 
+করতে পারি।
+    ১. একটা array/object এর elements কপি করে অন্য array/object তে রাখতে পারি।
+*/ 
 
 const max = Math.max(12, 32, 94, 56);
 // console.log(max);

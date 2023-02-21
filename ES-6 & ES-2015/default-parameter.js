@@ -1,8 +1,13 @@
 /** function default parameter for not provided values */
-/** Default Parameters: Default function parameters allow named parameters to be
+/** 
+Default Parameters: Default function parameters allow named parameters to be
 initialized with default values if no value or undefined is passed. 
+
 যদি কোন ফাংশন কল করার সময় কোন একটা প্যারামিটারকে প্রোভাইড না করা হয় তাহলে 
 আমরা ডিফল্ট প্যারামিটার ইউজ করতে পারি।
+
+যখন ফাংশনে কোনো মান pass  করা হয় না, তখন ফাংশনের প্যারামিটার এ একটি ডিফল্ট মান 
+সেট করা হয় এবং সেই প্যারামিটারকে Default parameter বলা হয়।
 */
 
 /** */

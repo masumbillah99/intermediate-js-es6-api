@@ -1,5 +1,9 @@
 /** (advanced) object and array Destructuring */
-
+/** একটা Array/object থেকে multiple ডাটা extract করে আনা কে destructuring বলে। */
+/** 1. Array destructuring তে sequence maintain করতে হবে।
+    2. Object destructuring তে sequence maintain করতে হয় না।
+        2.1 Property নাম সেম থাকতে হবে।
+*/
 const fish = {
     name: 'King Hilsa',
     address: 'Chandpur',

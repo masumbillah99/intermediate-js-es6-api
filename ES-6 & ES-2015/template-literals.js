@@ -9,6 +9,12 @@
 	; --- 
 */
 
+/** about ES6 template string
+	1. it allows embedding multiline strings without using '\n'.
+	2. template literals are inclosed by ` ` the characters.
+	3. allows expression interpolation like ${2+2}
+*/
+
 const person1 = 'Vladimir Putin';
 const person2 = 'Ben White';
 const person3 = `Donald Trump`;

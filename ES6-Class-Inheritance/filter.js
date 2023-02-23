@@ -19,11 +19,11 @@ const five = numbers.find(num => num % 5 === 0);
 console.log(five);
 
 const products = [
-    { id: 1, name: 'watch', price: 11000 },
-    { id: 2, name: 'mobile', price: 21000 },
-    { id: 3, name: 'tablet', price: 25000 },
-    { id: 4, name: 'laptop', price: 41000 },
-    { id: 5, name: 'desktop', price: 61000 },
+  { id: 1, name: 'watch', price: 11000 },
+  { id: 2, name: 'mobile', price: 21000 },
+  { id: 3, name: 'tablet', price: 25000 },
+  { id: 4, name: 'laptop', price: 41000 },
+  { id: 5, name: 'desktop', price: 61000 },
 ];
 
 const expensive = products.filter(product => product.price > 30000);

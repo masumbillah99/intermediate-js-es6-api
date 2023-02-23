@@ -1,13 +1,8 @@
 // var, let, const
-
-
 // default parameter
-
-
 // template literals / strings
-
-
 // arrow function
+
 const arrow = x => x * 5;
 console.log(arrow(3));
 
@@ -17,3 +12,17 @@ console.log(arrow(3));
 // destructuring (array, object)
 const { x, y, ...c } = { x: 32, y: 49, z: 23, name: 'Alim' };
 console.log(x, y, c);
+
+// ------------------------
+/** 1. optional chaining
+        student.marks?.math
+*/
+// 2. map, filter, find   -- important
+
+// 3. (optional): forEach, reduce (advanced)
+
+// 4. class   -- important
+
+// 5. (optional) inheritence, super
+
+// 6. (must) protypical Inheritence (chain)   -- important

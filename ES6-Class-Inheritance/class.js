@@ -16,13 +16,13 @@ class Instructor {
     constructor(name, location) {
         this.name = name;
         this.location = location;
-    }
+    };
     startSupportSession(time) {
         console.log(`start support session ${time}`);
-    }
+    };
     makeQuiz(module) {
         console.log(`make quiz for module ${module}`);
-    }
+    };
 }
 
 const aamir = new Instructor('AAMIR KHAN', 'Mumbai');

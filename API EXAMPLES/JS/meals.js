@@ -15,7 +15,7 @@ const diplayMeals = meals => {
     const mealsConainer = document.getElementById("meals-container");
     mealsConainer.innerHTML = '';
     meals.forEach(meal => {
-        console.log(meal);
+        // console.log(meal);
         const mealDiv = document.createElement('div');
         mealDiv.classList.add('col');
         mealDiv.innerHTML = `
@@ -24,7 +24,7 @@ const diplayMeals = meals => {
                 <div class="card-body">
                     <h5 class="card-title">${meal.strMeal}</h5>
                     <p class="card-text">This food teste is awesome. This food item load by calling API. And API is awesome for loading data from another source</p>
-                    <button onclick="loadMealDetail(${meal.idMeal})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mealDetails">
+                    <button onclick="loadMealDetail2(${meal.idMeal})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mealDetails">
                         Details
                     </button>
                 </div>
@@ -37,16 +37,30 @@ const diplayMeals = meals => {
 const searchMeals = () => {
     const searchText = document.getElementById('search-field').value;
     // search meals
-    // console.log(searchText);
+    console.log(searchText);
     loadMeals(searchText);
-    searchText.value = '';
 }
 
 const loadMealDetail = idMeal => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`;
     fetch(url)
         .then(res => res.json())
-        .then(data => displayMealDetails(data.meals[0]));
+        .then(data => displayMealDetails(data.meals[0]))
+        .catch(err => {
+            console.log(err);
+        })
+};
+
+// async await
+const loadMealDetail2 = async (idMeal) => {
+    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`;
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        displayMealDetails(data.meals[0]);
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 const displayMealDetails = meal => {
@@ -57,4 +71,4 @@ const displayMealDetails = meal => {
     `;
 }
 
-loadMeals('rice');
+loadMeals('fish');

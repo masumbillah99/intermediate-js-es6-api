@@ -12,52 +12,45 @@
 
 <body>
     <header>
-        <h1>Food Data load by api</h1>
+        <h1 class="text-center mt-3">Foods load by api</h1>
     </header>
 
     <main>
+        <!-- search container -->
+        <section class="container my-5">
+            <div class="d-flex align-items-center justify-content-center">
+                <input id="search-field" class="form-control w-50 me-3 ps-3" type="text" placeholder="search foods">
+                <button onclick="searchMeals()" class="btn btn-primary py-2 px-5">Search</button>
+            </div>
+        </section>
+
         <!-- meals container -->
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+        <section class="container">
+            <div id="meals-container" class="row row-cols-1 row-cols-md-3 g-4">
+            </div>
+        </section>
+
+        <!-- modal section -->
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="mealDetails" tabindex="-1" aria-labelledby="mealDetailsLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="mealDetailsLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="mealDetailsBody" class="modal-body">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a short card.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
 
 

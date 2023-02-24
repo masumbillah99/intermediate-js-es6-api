@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Load Countries by API</title>
     <style>
+        h1 {
+            text-align: center;
+        }
+
         #all-countries {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 13px;
         }
+
         .country {
             background-color: lightskyblue;
             border-radius: 7px;
@@ -22,7 +27,11 @@
 </head>
 
 <body>
-    <h2>All Countries</h2>
+    <h1>All Countries Load By API</h1>
+    <section id="country-detail">
+        <h2>Country Detail</h2>
+    </section>
+    
     <section>
         <div id="all-countries"></div>
     </section>

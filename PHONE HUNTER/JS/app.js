@@ -7,9 +7,23 @@ const loadPhones = async (searchText) => {
 };
 
 const displayPhones = phones => {
-    const phonesCotainer = document.getElementById('phones-container');
-    phonesCotainer.innerHTML = '';
     console.log(phones);
+
+    const phonesCotainer = document.getElementById('phones-container');
+    phonesCotainer.textContent = '';
+
+    // display 20 phones only
+    phones = phones.slice(0, 15);
+
+    // dispaly no phones found
+    const noPhone = document.getElementById('no-found-message');
+    if (phones.length === 0) {
+        noPhone.classList.remove('d-none');
+    } else {
+        noPhone.classList.add('d-none');
+    }
+
+    // display all phones
     phones.forEach(phone => {
         const phoneCard = document.createElement('div');
         phoneCard.classList.add('col');
@@ -25,18 +39,33 @@ const displayPhones = phones => {
         `;
         phonesCotainer.appendChild(phoneCard);
     });
+
+    // stop spinner / loader
+    toggleSpinner(false);
 };
 
+// handler search button click
 document.getElementById('search-btn').addEventListener('click', () => {
+    toggleSpinner(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     if (searchText) {
         loadPhones(searchText);
     } else {
-        alert("Empty input field");
+        alert(`Empty input field!!  Please write phone name`);
+        toggleSpinner(false);
     }
+    searchField.value = '';
 });
 
+const toggleSpinner = (isLoading) => {
+    const loaderSection = document.getElementById('loading-spinner');
+    if (isLoading) {
+        loaderSection.classList.remove('d-none');
+    } else {
+        loaderSection.classList.add('d-none');
+    }
+}
 
 
-loadPhones();
+// loadPhones();

@@ -1,0 +1,6 @@
+-----  phone hunter website steps  -----
+1. load data using phone hunter API 
+2. Display phones and implement search functionality
+3. toggle no phone found message based on search result
+4. show and hide loading spinner while loading API data
+5. 

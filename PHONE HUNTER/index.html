@@ -25,7 +25,7 @@
         <section>
             <div class="mb-5 d-flex gap-3 align-items-center justify-content-center">
                 <input id="search-field" type="email" class="form-control w-50" id="exampleFormControlInput1"
-                    placeholder="Search your phone (apple, samsung)">
+                    placeholder="Search your phone (apple, samsung)" value="oppo">
                 <button id="search-btn" class="btn btn-primary">Search</button>
             </div>
         </section>
@@ -34,9 +34,38 @@
         <section>
             <div id="phones-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-3">
             </div>
-            <div id="no-found-message" class="w-75 bg-warning mx-auto p-5 text-center rounded-4 d-none">
+            <div id="no-found-message" class="w-75 bg-warning mx-auto my-3 p-5 text-center rounded-4 d-none">
                 <h3 class="text-primary">No Phone Found, Please try a new search!</h3>
             </div>
+            <div id="show-all" class="text-center mt-5 mb-3 d-none">
+                <button id="show-all-btn" class="btn btn-primary">Show All</button>
+            </div>
+        </section>
+
+        <!-- modal contents -->
+        <section>
+            <!-- Button trigger modal -->
+           
+
+            <!-- Modal -->
+            <div class="modal fade" id="phoneDetailModal" tabindex="-1" aria-labelledby="phoneDetailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="phoneDetailModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="phone-details-body" class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- loading spinners -->

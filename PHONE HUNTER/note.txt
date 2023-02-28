@@ -3,4 +3,8 @@
 2. Display phones and implement search functionality
 3. toggle no phone found message based on search result
 4. show and hide loading spinner while loading API data
-5. 
+5. implement show all button Display all data
+6. Dynamic API data load and search on keyboard enter button
+7. show phone details data on a modal
+8. common API related mistakes and asynchronous javascript 
+9. 

@@ -8,3 +8,28 @@
 7. show phone details data on a modal
 8. common API related mistakes and asynchronous javascript 
 9. 
+
+----- module summary (should know) -----
+1. fetch  --must provide url (Dynamic url, static url)
+2. how to convert fetch promise return to json
+3. how to convert json to data
+4. [cool headed]: 
+    i. array of objects
+    ii. object with property users 
+    iii. object with a property called data
+    iv. nested object 
+5.
+
+---------------- should know
+1. DOM manipulation
+2. get something from the DOM
+3. create element to append to the DOM
+4. Dynamically load data based on id 
+
+----------------- extra know
+1. array method --> forEach, map, filter, find 
+2. template string for Dynamic html 
+3. arrow function 
+
+--- Why we use fetch()?
+Ans: Call the API and get the data.

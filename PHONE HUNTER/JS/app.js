@@ -112,18 +112,35 @@ const displayPhoneDetails = (phone) => {
     phoneDetailsBody.innerHTML = `
         <div>
             <p><b>Release Date:</b> ${phone.releaseDate ? phone.releaseDate : 'No Release Date Found'}</p>
-            <p><b>WLAN:</b> ${phoneOther.WLAN}</p>
-            <p><b>Bluetooth:</b> ${phoneOther.Bluetooth}</p>
+            <p><b>WLAN:</b> ${phoneOther.WLAN ? phoneOther.WLAN : 'No WLAN found'}</p>
+            <p><b>Bluetooth:</b> ${phoneOther.Bluetooth ? phone.Bluetooth : 'No Bluetooth found'}</p>
             <h5>Main Features</h5>
-            <p><b>Chipset:</b> ${phone.mainFeatures.chipSet}</p>
-            <p><b>Size:</b> ${phone.mainFeatures.displaySize}</p>
-            <p><b>Memory:</b> ${phone.mainFeatures.memory}</p>
-            <p><b>Storage:</b> ${phone.mainFeatures.storage}</p>
+            <p><b>Chipset:</b> ${phone.mainFeatures.chipSet ? phone.mainFeatures.chipSet : 'No Chipset found'}</p>
+            <p><b>Size:</b> ${phone.mainFeatures.displaySize ? phone.mainFeatures.displaySize : 'No Display size found'}</p>
+            <p><b>Memory:</b> ${phone.mainFeatures.memory ? phone.mainFeatures.memory : 'No memory found'}</p>
+            <p><b>Storage:</b> ${phone.mainFeatures.storage ? phone.mainFeatures.storage : 'No storage found'}</p>
+            <div>
+                <span><b>Sensors</b></span> <br>
+                <ul id="sensors-list"></ul>
+            </div>
+            
         </div>
     `;
+    const phoneSensors = phone.mainFeatures.sensors;
+    const ul = document.getElementById('sensors-list');
+    if (phoneSensors) {
+        phoneSensors.forEach(sensor => {
+            const li = document.createElement('li');
+            li.innerHTML = sensor;
+            ul.appendChild(li);
+        })
+    } else {
+        ul.innerText = 'No sensor found';
+    }
+
 
     // <img src="${phone.image}" class="mx-auto w-50" alt="not found">
 }
 
 
-loadPhones('oppo');
+loadPhones('ipad');

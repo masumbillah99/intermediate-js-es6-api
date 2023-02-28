@@ -1,0 +1,7 @@
+We can create object in 5 way. those are:
+    1. Object literal syntax
+    2. Object constructor
+    3. Constructor function
+    4. ES6 Class
+    5. Object.create()
+

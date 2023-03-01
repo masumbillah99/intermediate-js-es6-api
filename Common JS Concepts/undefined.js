@@ -1,5 +1,5 @@
 /** 
- 8 ways to ge undefine
+ 8 ways to ge undefined
     1. variable that is not initialized will give undefined
     2. function with no return
     3. parameter that is not passed will undefined

@@ -5,3 +5,11 @@ We can create object in 5 way. those are:
     4. ES6 Class
     5. Object.create()
 
+-----------this---------
+1. যদি তুমি কোন একটা অবজেক্টের মেথড থেকে সেই অবজেক্টের প্রপার্টিকে পেতে চাও তাহলে 
+    প্রপার্টি নামের আগে this. বসাতে হবে।
+2. একটা মেথড থেকে আরেকটা মেথড কে কল করা যায় this. দিয়ে।
+3. 
+
+----------
+keys -- object property is called keys.

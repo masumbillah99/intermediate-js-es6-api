@@ -5,7 +5,17 @@ We can create object in 5 way. those are:
     4. ES6 Class
     5. Object.create()
 
------------this---------
+Ways to clone object
+    1. use the spread operator (shallow copy)
+    2. use JSON parsing (Deep copy)
+
+2 ways to delete/remove object property
+    1. delete person.age        -- person [object]
+    2. const {property, ...rest} = object;
+
+
+
+-----------this-----------
 1. যদি তুমি কোন একটা অবজেক্টের মেথড থেকে সেই অবজেক্টের প্রপার্টিকে পেতে চাও তাহলে 
     প্রপার্টি নামের আগে this. বসাতে হবে।
 2. একটা মেথড থেকে আরেকটা মেথড কে কল করা যায় this. দিয়ে।
@@ -13,3 +23,32 @@ We can create object in 5 way. those are:
 
 ----------
 keys -- object property is called keys.
+
+
+--------- ADVANCED JS OBJECTS ----------
+১. অবজেক্টের প্রিমিটিভ ভ্যালু তুলনা করলে জাভাস্ক্রিপ্ট মান চেক করার পাশাপাশি অবজেক্টের 
+    রেফারেন্সও চেক করে।
+ 
+----- Javascript Object Immutability -----
+freeze() : read, not create, not update, not delete
+seal() : read, not create, not update
+
+----------------------
+1. compare object, referential integritiy
+2. Javascript call(), apply() and bind() methods
+3. this keyword in Javascript
+
+to invoke the function, it will pass an object as first parameter which will be the value of this inside function
+
+apply method in Javascript is same as call(). It is used to invoke the function but the parameters will be passed in array. This may be very useful in scenarios where we get the input in form of array or we have to pass variable number of arguments.
+
+bind(): bind() method in Javascript is used to create new function, it will pass an object as parameter which will be the value of this inside function.
+
+In Javascript, the this , it's not any variable. We can not change the value of it. Which object depends on how this is being invoked (used or called).
+
+the this keyword refers to different objects depending on how it is used:
+    In an object method, this refers to the object.
+    Alone, this refers to the global object.
+    In a function, this refers to the global object.
+    In an event, this refers to the element that received the event.
+    Methods like call, apply and bind can refer this to any object

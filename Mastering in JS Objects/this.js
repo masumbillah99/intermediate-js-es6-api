@@ -46,3 +46,4 @@ function clickHandler() {
 document.getElementById('btn-click2').addEventListener('click', function () {
     console.log(this);
 });
+

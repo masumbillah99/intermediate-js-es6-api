@@ -26,3 +26,5 @@ delete bottle.isCleand;     // delete object property
 bottle.price = 100;         // modify object property value
 bottle.height = 13;         // can't add new property if sealed
 console.log(bottle);
+
+Object.seal

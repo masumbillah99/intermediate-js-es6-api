@@ -4,8 +4,9 @@
     2. any number (+ve, -ve) will be truthy other than 0
     3. any string other than empty string
     4. '0', 'false'
-    5. empty object
-    6. empty array
+    5. [] empty object
+    6. {} empty array
+    7. all other values
 
  Falsy:
     1. false
@@ -13,7 +14,7 @@
     3. empty string ''
     4. undefined
     5. null
-    6. 
+    6. NaN
 */
 
 // const x = 8;

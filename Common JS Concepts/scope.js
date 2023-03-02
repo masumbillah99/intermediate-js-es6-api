@@ -1,3 +1,10 @@
+/** Scope determins the accessibility (visibility) of variables. Javascript has 
+3 types of scope: 
+    1. Block scope, 
+    2. Function scope & 
+    3. Global scope 
+*/
+
 function add(a, b) {
     const total = a + b;
     console.log(a, b);
